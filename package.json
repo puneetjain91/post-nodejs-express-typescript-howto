@@ -10,7 +10,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ornio-no/post-nodejs-express-typescript-howto.git"
+        "url": "git+https://github.com/javakarthik/post-nodejs-express-typescript-howto.git"
     },
     "keywords": [
         "nodejs",
@@ -20,9 +20,9 @@
     "author": "Flamur Mavraj (Ornio AS)",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/ornio-no/post-nodejs-express-typescript-howto/issues"
+        "url": "https://github.com/javakarthik/post-nodejs-express-typescript-howto/issues"
     },
-    "homepage": "https://github.com/ornio-no/post-nodejs-express-typescript-howto#readme",
+    "homepage": "https://github.com/javakarthik/post-nodejs-express-typescript-howto#readme",
     "husky": {
         "hooks": {
             "pre-commit": "pretty-quick --staged"
