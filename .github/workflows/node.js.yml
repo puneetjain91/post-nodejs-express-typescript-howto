@@ -33,7 +33,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         # this is just an example, this could be any command that will trigger jest
-        test-command: "npm test --coverage"
+        test-command: "npm test -- --coverage"
         coverage-comment: true
     #- run: npm test
     #- run: npm test --json --outputFile=result.json --testLocationInResults
