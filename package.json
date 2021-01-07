@@ -6,7 +6,7 @@
     "scripts": {
         "start": "nodemon",
         "build": "tsc",
-        "test": "jest /tests/"
+        "test": "jest"
     },
     "repository": {
         "type": "git",
