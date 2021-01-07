@@ -36,16 +36,12 @@ jobs:
         #test-command: "npm test --coverage"
         #coverage-comment: true
     #- run: npm test
-    #- run: npm test --json --outputFile=result.json --testLocationInResults
-    #- uses: tanmen/jest-reporter@v1.1
-    #  if: always()
-    #  with:
-    #    github-token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Run unit test  
-      uses: ziishaned/jest-reporter-action@v0.0.1
+    - run: jest --json --outputFile=result.json --testLocationInResults
+    - uses: tanmen/jest-reporter@v1.1
+      if: always()
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        test-command: "npm test --coverage"
+    
     - name: Run linters & prettier
       uses: wearerequired/lint-action@v1
       with:
