@@ -36,7 +36,7 @@ jobs:
         #test-command: "npm test --coverage"
         #coverage-comment: true
     #- run: npm test
-    - run: npx test --json --outputFile=result.json --testLocationInResults
+    - run: npm test --json --outputFile=result.json --testLocationInResults
     - uses: tanmen/jest-reporter@v1
       if: always()
       with:
