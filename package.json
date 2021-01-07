@@ -28,6 +28,10 @@
             "pre-commit": "pretty-quick --staged"
         }
     },
+    "jest": {
+     "collectCoverage": true,
+     "coverageReporters": ["json", "html"]
+ },
     "devDependencies": {
         "@types/express": "^4.17.6",
         "@types/jest": "^26.0.9",
