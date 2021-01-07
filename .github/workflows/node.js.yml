@@ -27,13 +27,14 @@ jobs:
         node-version: ${{ matrix.node-version }}    
     - run: npm ci
     - run: npm run build --if-present   
+    - run: npm test --coverage=true
     - name: Run unit test
       uses: mattallty/jest-github-action@v1.0.3
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         # this is just an example, this could be any command that will trigger jest
-        test-command: "npm test"
+        test-command: "npm test --coverage=true"
         #coverage-comment: true
     #- run: npm test
     
