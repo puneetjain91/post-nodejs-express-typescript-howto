@@ -8,7 +8,7 @@ describe('isNumber Utils', () => {
     });
 
     it('Its not a number', () => {
-        [false, true, NaN, [],1, {}, '1a'].map((n) => {
+        [false, true, NaN, [], {}, '1a'].map((n) => {
             expect(isNumber(n)).toEqual(false);
         });
     });
