@@ -45,7 +45,7 @@ jobs:
       uses: ziishaned/jest-reporter-action@v0.0.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        test-command: "npm jest --coverage"
+        test-command: "npm test --coverage"
     - name: Run linters & prettier
       uses: wearerequired/lint-action@v1
       with:
