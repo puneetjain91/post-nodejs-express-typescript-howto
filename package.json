@@ -29,7 +29,7 @@
         }
     },
     "jest": {
-     "testResultsProcessor": "./node_modules/jest-slack-integration"
+     "testResultsProcessor": "./node_modules/jest-slack-integration",
      "collectCoverage": true,
      "coverageReporters": ["json", "html"],
      "coverageThreshold": {
