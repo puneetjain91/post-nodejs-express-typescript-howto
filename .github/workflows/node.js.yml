@@ -27,21 +27,48 @@ jobs:
         node-version: ${{ matrix.node-version }}    
     - run: npm ci
     - run: npm run build --if-present   
-    - run: npm test --coverage=true
-    - name: Run unit test
-      uses: mattallty/jest-github-action@v1.0.3
+#     - run: npm test --coverage=true
+#     - name: Run unit test
+#       uses: mattallty/jest-github-action@v1.0.3
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       with:
+#         # this is just an example, this could be any command that will trigger jest
+#         test-command: "npm test --coverage"
+#         #coverage-comment: true
+    - run: npm test 
+      env :
+            CI: true
+    - name: GitHub Action for Slack
+      if: success()
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      uses: Ilshidur/action-slack@1.6.2
       with:
-        # this is just an example, this could be any command that will trigger jest
-        test-command: "npm test --coverage"
-        #coverage-comment: true
-    #- run: npm test 
+       args: 'A new version of your Node.js app has been built'
+       status: starting
+       channel: '#newtalk'
+       if: always()
        
-    - name: Run linters & prettier
-      uses: wearerequired/lint-action@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        # Enable linters
-        eslint: true
-        prettier: true
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+#     - name: Run linters & prettier
+#       uses: wearerequired/lint-action@v1
+#       with:
+#         github_token: ${{ secrets.GITHUB_TOKEN }}
+#         # Enable linters
+#         eslint: true
+#         prettier: true
