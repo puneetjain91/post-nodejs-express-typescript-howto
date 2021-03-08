@@ -39,6 +39,12 @@
         "statements": -10
       }
     },
+    "jestSlackIntegration": {
+     "webhookUrl": "https://hooks.slack.com/services/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",
+     "bugsnagAPI": "bgfdsy564e3y6b7nuh54dd",
+      "appName": "My App"
+   },    
+        
     "clearMocks": true,
     "moduleFileExtensions": [
       "js",
