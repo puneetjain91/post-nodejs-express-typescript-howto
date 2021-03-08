@@ -46,9 +46,9 @@ jobs:
       uses: Ilshidur/action-slack@1.6.2
       with:
        args: 'A new version of your Node.js app has been built'
-       status: starting
-       channel: '#newtalk'
-       if: always()      
+#        status: starting
+#        channel: '#newtalk'
+#        if: always()      
              
 #     - name: Run linters & prettier
 #       uses: wearerequired/lint-action@v1
