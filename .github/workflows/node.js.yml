@@ -48,23 +48,8 @@ jobs:
        args: 'A new version of your Node.js app has been built'
        status: starting
        channel: '#newtalk'
-       if: always()
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
+       if: always()      
+             
 #     - name: Run linters & prettier
 #       uses: wearerequired/lint-action@v1
 #       with:
